@@ -19,18 +19,18 @@ pipeline {
             steps {
                 echo '--- Stage 2: Validate ---'
                 bat '''
-                    IF NOT EXIST index.html (
-                        echo ERROR: index.html not found!
+                    IF NOT EXIST trial.txt (
+                        echo ERROR: trial.txt not found!
                         exit /b 1
                     ) ELSE (
-                        echo index.html found.
+                        echo trial.txt found.
                     )
 
-                    IF NOT EXIST students (
-                        echo ERROR: students folder not found!
+                    IF NOT EXIST Jenkinsfile (
+                        echo ERROR: Jenkinsfile not found!
                         exit /b 1
                     ) ELSE (
-                        echo students folder found.
+                        echo Jenkinsfile found.
                     )
 
                     echo Validation passed successfully.
